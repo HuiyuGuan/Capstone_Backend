@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "souns",
+    "password": null,
+    "database": "ttp_database",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "souns",
+    "password": null,
+    "database": "ttp_database",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "souns",
+    "password": null,
+    "database": "ttp_database",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
