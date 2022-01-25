@@ -1,0 +1,27 @@
+{
+  "name": "capstone_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HuiyuGuan/Capstone_Backend.git"
+  },
+  "author": "Halid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HuiyuGuan/Capstone_Backend/issues"
+  },
+  "homepage": "https://github.com/HuiyuGuan/Capstone_Backend#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.14.1"
+  }
+}
