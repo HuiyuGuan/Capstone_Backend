@@ -8,6 +8,8 @@ const user = require("./models/user");
 const order = require("./models/order");
 const category = require("./models/category");
 const sellingList = require("./models/selllingList");
+const feedback = require("./models/feedback");
+const purchaseCart = require("./models/purchaseCart");
 const app = express();
 
 var corsOptions = {
@@ -22,6 +24,10 @@ app.use('/items', require('./routes/item'))
 app.use('/orders',require('./routes/order'))
 app.use('/category', require('./routes/category'))
 app.use('/sellinglists', require('./routes/sellingList'))
+app.use('/feedback', require('./routes/feedback'))
+app.use('/purchaseCart', require('./routes/purchaseCart'))
+
+
 
 database.sync().then(() =>{
     app.listen(port, () =>
