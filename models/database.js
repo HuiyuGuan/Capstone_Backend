@@ -4,10 +4,11 @@ const pkg = require('../package.json')
 const database = new Sequelize(
     process.env.DATABASE_url || `postgres://postgres:sql@localhost:5432/${pkg.name}`,
     {
-        logging : false,
-        dialect : 'postgres'
+        dialect : 'postgres',
+        logging : false
     }
 )
+
 
 database
   .authenticate()
@@ -18,4 +19,4 @@ database
     console.error('Unable to connect to the database:', err);
   });
 
-module.exports = database
+module.exports = database;

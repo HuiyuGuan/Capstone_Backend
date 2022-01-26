@@ -1,10 +1,11 @@
 const router = require('express').Router()
-const Item = require('../models/item')
+const SellingList = require('../models/selllingList')
+const database = require('../models/database')
 
 router.get('/', async(req, res) => {
     try{
-        const items = await Item.findAll()
-        res.status(200).send(items)
+        const SellingLists = await SellingList.findAll()
+        res.status(200).send(SellingLists)
     }catch(error){
         res.status(404).send(error.message)
     }
@@ -13,8 +14,8 @@ router.get('/', async(req, res) => {
 
 router.post('/', async(req, res) => {
     try{
-        const newItem = await Item.create(req.body)
-        res.json(newItem)
+        const newSellingList = await SellingList.create(req.body)
+        res.json(newSellingList)
     }catch (error){
         res.send(error.message)
     }

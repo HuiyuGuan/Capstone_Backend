@@ -30,12 +30,12 @@ const user = database.define('user' ,{
         }
     },
     phone: {
-        type: Sequelize, String,
+        type: Sequelize.STRING,
         allowNull: false,
         notEmpty: true
     },
     country: {
-        type: Sequelize, String,
+        type: Sequelize.STRING,
         allowNull: false,
         notEmpty: true
     }

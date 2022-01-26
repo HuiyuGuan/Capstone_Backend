@@ -1,5 +1,4 @@
 const Sequelize = require('sequelize')
-const { default: ModelManager } = require('sequelize/dist/lib/model-manager')
 const database = require("./database")
 
 const item = database.define('item' ,{
