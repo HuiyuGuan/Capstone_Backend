@@ -22,8 +22,8 @@ Feedback.belongsTo(User)
 Item.hasMany(Feedback)
 Feedback.belongsTo(Item)
 //many to many or one to many?
-Item.belongsToMany(Order)
-Order.belongsToMany(Item)
+Order.hasMany(Item)
+Item.belongsTo(Order)
 
 Item.belongsToMany(PurchaseCart)
 PurchaseCart.belongsToMany(Item)
