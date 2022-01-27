@@ -7,6 +7,7 @@ const SellingList = require('./selllingList');
 const PurchaseCart = require('./purchaseCart');
 const Feedback = require('./feedback');
 
+
 User.hasMany(Item)
 Item.belongsTo(User)
 
@@ -40,4 +41,5 @@ module.exports = {
     SellingList,
     PurchaseCart,
     Feedback
+
 }

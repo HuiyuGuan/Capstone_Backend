@@ -2,6 +2,7 @@ const Sequelize = require('sequelize')
 const database = require("./database")
 
 const feedback = database.define('feedback' ,{
+
     feedbackId :{
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -9,7 +10,6 @@ const feedback = database.define('feedback' ,{
         primaryKey : true,
         notEmpty: true
     },
-
     item_id : {
         type: Sequelize.INTEGER,
         allowNull : false,
@@ -34,3 +34,4 @@ const feedback = database.define('feedback' ,{
 })
 
 module.exports = feedback;
+
