@@ -19,7 +19,6 @@ const user = database.define('user' ,{
             return () => this.getDataValue('password')
         }
     },
-
     // salt: {
     //     type: Sequelize.STRING,
     //     get() {
@@ -69,5 +68,6 @@ const user = database.define('user' ,{
 // }
 // user.beforeCreate(setSaltAndPassword)
 // user.beforeUpdate(setSaltAndPassword)
+
 
 module.exports = user;

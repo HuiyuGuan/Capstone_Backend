@@ -51,6 +51,7 @@ app.use('/sellinglists', require('./routes/sellingList'))
 app.use('/feedbacks', require('./routes/feedback'))
 app.use('/purchaseCart', require('./routes/purchaseCart'))
 
+
 // app.use(
 //     session({
 //       secret: "a super secretive secret key string to encrypt and sign the cookie",
@@ -64,6 +65,7 @@ app.use('/purchaseCart', require('./routes/purchaseCart'))
 // app.use(passport.session()); 
 
 app.use("/auth", authRouter);
+
 
 database.sync().then(() =>{
     app.listen(port, () =>
