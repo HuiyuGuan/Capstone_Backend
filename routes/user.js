@@ -3,7 +3,7 @@ const Item = require('../models/item')
 const User = require('../models/user')
 const database = require('../models/database')
 
-router.get('/', async(req, res) => {
+router.get('/getUser', async(req, res) => {
     try{
         const users = await User.findAll()
         res.status(200).send(users)
@@ -13,7 +13,7 @@ router.get('/', async(req, res) => {
     }
 )
 
-router.post('/', async(req, res) => {
+router.post('/postUser', async(req, res) => {
     try{
         const newUser = await User.create(req.body)
         res.json(newUser)
