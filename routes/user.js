@@ -16,13 +16,14 @@ router.get('/', async(req, res) => {
     
 )
 
-router.post('/post', async(req, res) => {
+router.post('/', async(req, res) => {
     try{
         const newUser = await User.create(req.body)
         res.json(newUser)
     }catch (error){
         res.send(error.message)
     }
+})
     // let { username } = req.body;
     // let { password} = req.body;
     // let {name } = req.body;
@@ -46,6 +47,6 @@ router.post('/post', async(req, res) => {
     //     res.status(400).json(err);
     //   }); 
 
-})
+
 
 module.exports = router;
