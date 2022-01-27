@@ -4,8 +4,8 @@ const database = require('../models/database')
 
 router.get('/', async(req, res) => {
     try{
-        const Feedbacks = await Feedback.findAll()
-        res.status(200).send(Feedbacks)
+        const feedbacks = await Feedback.findAll()
+        res.status(200).send(feedbacks)
     }catch(error){
         res.status(404).send(error.message)
     }

@@ -1,3 +1,4 @@
+const { password } = require('pg/lib/defaults');
 const Sequelize = require('sequelize')
 const pkg = require('../package.json')
 

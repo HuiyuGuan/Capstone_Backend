@@ -4,8 +4,8 @@ const database = require('./database');
 const Order = require('./order');
 const Category = require('./category');
 const SellingList = require('./selllingList');
-const Feedback = require('./feedback');
 const PurchaseCart = require('./purchaseCart');
+const Feedback = require('./feedback');
 
 User.hasMany(Item)
 Item.belongsTo(User)
@@ -22,8 +22,8 @@ Feedback.belongsTo(User)
 Item.hasMany(Feedback)
 Feedback.belongsTo(Item)
 //many to many or one to many?
-Item.belongsToMany(Order)
-Order.belongsToMany(Item)
+Order.hasMany(Item)
+Item.belongsTo(Order)
 
 Item.belongsToMany(PurchaseCart)
 PurchaseCart.belongsToMany(Item)
@@ -38,6 +38,6 @@ module.exports = {
     Order,
     Category,
     SellingList,
-    Feedback,
-    PurchaseCart
+    PurchaseCart,
+    Feedback
 }
