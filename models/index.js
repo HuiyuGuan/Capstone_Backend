@@ -4,8 +4,9 @@ const database = require('./database');
 const Order = require('./order');
 const Category = require('./category');
 const SellingList = require('./selllingList');
-const Feedback = require('./feedback');
 const PurchaseCart = require('./purchaseCart');
+const Feedback = require('./feedback');
+
 
 User.hasMany(Item)
 Item.belongsTo(User)
@@ -38,6 +39,7 @@ module.exports = {
     Order,
     Category,
     SellingList,
-    feedback,
-    purchaseCart
+    PurchaseCart,
+    Feedback
+
 }

@@ -2,34 +2,35 @@ const Sequelize = require('sequelize')
 const database = require("./database")
 
 const feedback = database.define('feedback' ,{
-    feedback_id : {
+
+    feedbackId :{
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull : false,
         primaryKey : true,
         notEmpty: true
     },
+    item_id : {
+        type: Sequelize.INTEGER,
+        allowNull : false,
+        notEmpty: true
+    },
     username : {
         type: Sequelize.STRING,
         allowNull: false,
+        primaryKey: true,
         notEmpty: true
     },
-    item_id : {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        notEmpty: true
-    },
-    review: {
+
+    review : {
         type: Sequelize.STRING,
+        allowNull: true,
     },
-    rate : {
+
+    rating : {
         type: Sequelize.INTEGER,
-        allowNull: false,
-        validate :{
-            min: 0,
-            max: 5
+        allowNull: true,
     }
-}
 })
 
 module.exports = feedback;

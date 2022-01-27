@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const port = process.env.port || 8080;
+const port = process.env.PORT || 8080;
 const database = require("./models/database");
 const item = require("./models/item");
 const user = require("./models/user");
@@ -24,8 +24,8 @@ app.use('/items', require('./routes/item'))
 app.use('/orders',require('./routes/order'))
 app.use('/category', require('./routes/category'))
 app.use('/sellinglists', require('./routes/sellingList'))
-app.use('/purchasecart', require('./routes/purchaseCart'))
 app.use('/feedback', require('./routes/feedback'))
+app.use('/purchaseCart', require('./routes/purchaseCart'))
 
 
 database.sync().then(() =>{

@@ -4,8 +4,10 @@ const database = require('../models/database')
 
 router.get('/', async(req, res) => {
     try{
-        const PurchaseCarts = await PurchaseCart.findAll()
-        res.status(200).send(PurchaseCarts)
+
+        const purchaseCarts = await PurchaseCart.findAll()
+        res.status(200).send(purchaseCarts)
+
     }catch(error){
         res.status(404).send(error.message)
     }
