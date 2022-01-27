@@ -37,7 +37,7 @@ passport.deserializeUser(async (id, done) => {
   
 
 var corsOptions = {
-    origin: "http:// localhost: 8080"
+    origin: "http://heroku.com"
 };
 
 app.use(cors(corsOptions));
