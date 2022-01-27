@@ -16,7 +16,7 @@ const order = database.define('order' ,{
         notEmpty: true
     },
     item_id: {
-        type: Sequelize.ARRAY,
+        type: Sequelize.INTEGER,
         allowNull:false,
         notEmpty: true
     },
