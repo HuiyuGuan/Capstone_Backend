@@ -2,7 +2,7 @@ const router = require('express').Router()
 const Item = require('../models/item')
 const User = require('../models/user')
 const database = require('../models/database')
-const { user } = require('pg/lib/defaults')
+// const { user } = require('pg/lib/defaults')
 
 router.get('/', async(req, res) => {
     try{
@@ -16,7 +16,7 @@ router.get('/', async(req, res) => {
     
 )
 
-router.post('/', async(req, res) => {
+router.post('/post', async(req, res) => {
     // try{
     //     const newUser = await User.create(req.body)
     //     res.json(newUser)
@@ -35,7 +35,6 @@ router.post('/', async(req, res) => {
       password,
       name,
       email,
-      gender,
       phone,
       country
 
