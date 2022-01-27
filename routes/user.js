@@ -17,34 +17,34 @@ router.get('/', async(req, res) => {
 )
 
 router.post('/post', async(req, res) => {
-    // try{
-    //     const newUser = await User.create(req.body)
-    //     res.json(newUser)
-    // }catch (error){
-    //     res.send(error.message)
-    // }
-    let { username } = req.body;
-    let { password} = req.body;
-    let {name } = req.body;
-    let { email } = req.body;
-    let { phone } = req.body;
-    let {country} = req.body;
+    try{
+        const newUser = await User.create(req.body)
+        res.json(newUser)
+    }catch (error){
+        res.send(error.message)
+    }
+    // let { username } = req.body;
+    // let { password} = req.body;
+    // let {name } = req.body;
+    // let { email } = req.body;
+    // let { phone } = req.body;
+    // let {country} = req.body;
 
-    User.create({
-      username,
-      password,
-      name,
-      email,
-      phone,
-      country
+    // User.create({
+    //   username,
+    //   password,
+    //   name,
+    //   email,
+    //   phone,
+    //   country
 
-    })
-      .then(User => {
-        res.status(201).json(User);
-      })
-      .catch(err => {
-        res.status(400).json(err);
-      }); 
+    // })
+    //   .then(User => {
+    //     res.status(201).json(User);
+    //   })
+    //   .catch(err => {
+    //     res.status(400).json(err);
+    //   }); 
 
 })
 
