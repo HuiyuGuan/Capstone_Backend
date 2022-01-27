@@ -20,4 +20,18 @@ router.post('/', async(req, res) => {
     }
 })
 
+router.delete('/:id', async(req, res) => {
+    try {
+        const inputid = req.params.id;
+        await Item.destroy({ where : { id : inputid } });
+        res.status(200).json({
+            outcome: `Deleted item with id ${inputid}.`
+        })
+    } catch (error) {
+        res.send(error.message)
+    }
+})
+
+
+
 module.exports = router;
