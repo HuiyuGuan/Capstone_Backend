@@ -2,6 +2,7 @@ const router = require('express').Router()
 const Item = require('../models/item')
 const User = require('../models/user')
 const database = require('../models/database')
+const { user } = require('pg/lib/defaults')
 
 router.get('/', async(req, res) => {
     try{
@@ -11,15 +12,41 @@ router.get('/', async(req, res) => {
         res.status(404).send(error.message)
     }
     }
+
+    
 )
 
 router.post('/', async(req, res) => {
-    try{
-        const newUser = await User.create(req.body)
-        res.json(newUser)
-    }catch (error){
-        res.send(error.message)
-    }
+    // try{
+    //     const newUser = await User.create(req.body)
+    //     res.json(newUser)
+    // }catch (error){
+    //     res.send(error.message)
+    // }
+    let { username } = req.body;
+    let { password} = req.body;
+    let {name } = req.body;
+    let { email } = req.body;
+    let { phone } = req.body;
+    let {country} = req.body;
+
+    User.create({
+      username,
+      password,
+      name,
+      email,
+      gender,
+      phone,
+      country
+
+    })
+      .then(User => {
+        res.status(201).json(User);
+      })
+      .catch(err => {
+        res.status(400).json(err);
+      }); 
+
 })
 
 module.exports = router;
