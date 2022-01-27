@@ -6,6 +6,7 @@ router.get('/', async(req, res) => {
     try{
         const feedback = await Feedback.findAll()
         res.status(200).send(feedback)
+
     }catch(error){
         res.status(404).send(error.message)
     }
@@ -22,3 +23,4 @@ router.post('/', async(req, res) => {
 })
 
 module.exports = router;
+

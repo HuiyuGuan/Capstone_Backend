@@ -2,6 +2,7 @@ const { password } = require('pg/lib/defaults');
 const Sequelize = require('sequelize')
 const pkg = require('../package.json')
 
+
 // const database = new Sequelize(
 //     process.env.DATABASE_url || `postgres://postgres:sql@localhost:5432/${pkg.name}`,
 //     {
@@ -22,6 +23,7 @@ const database = new Sequelize(process.env.DATABASE_URL, {
     ssl: {
       require: true,
       rejectUnauthorized: false
+
     }
   }
 }

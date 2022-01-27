@@ -28,7 +28,6 @@ app.use('/feedback', require('./routes/feedback'))
 app.use('/purchaseCart', require('./routes/purchaseCart'))
 
 
-
 database.sync().then(() =>{
     app.listen(port, () =>
         console.log(`Serving portmanteau since there were ports ${port}`)
