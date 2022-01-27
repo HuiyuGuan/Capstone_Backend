@@ -13,9 +13,9 @@ const sellingList = require("./models/selllingList");
 const feedbacks = require("./models/feedback");
 const purchaseCart = require("./models/purchaseCart");
 
-// const SequelizeStore = require("connect-session-sequelize")(session.Store);
+const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const database = require("./models/database");
-// const sessionStore = new SequelizeStore({ database });
+const sessionStore = new SequelizeStore({ database });
 
 const app = express();
 
