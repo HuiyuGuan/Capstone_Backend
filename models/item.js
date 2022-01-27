@@ -3,7 +3,7 @@ const database = require("./database")
 
 const item = database.define('item' ,{
     //item_id, name, price, stock, image, seller, description
-    id : {
+    item_id : {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull : false,

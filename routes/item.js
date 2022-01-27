@@ -20,10 +20,10 @@ router.post('/', async(req, res) => {
     }
 })
 
-router.delete('/:id', async(req, res) => {
+router.delete('/:item_id', async(req, res) => {
     try {
-        const inputid = req.params.id;
-        await Item.destroy({ where : { id : inputid } });
+        const inputid = req.params.item_id;
+        await Item.destroy({ where : { item_id : inputid } });
         res.status(200).json({
             outcome: `Deleted item with id ${inputid}.`
         })
