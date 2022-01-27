@@ -14,6 +14,16 @@ const user = database.define('user' ,{
         allowNull: false,
         validate:{
             notEmpty: true,
+        },
+        get() {
+            return () => this.getDataValue('password')
+        }
+    },
+
+    salt: {
+        type: Sequelize.STRING,
+        get() {
+            return() => this.getDataValue('salt')
         }
     },
     name : {
@@ -39,6 +49,25 @@ const user = database.define('user' ,{
         allowNull: false,
         notEmpty: true
     }
-})
+});
+
+user.generateSalt = function() {
+    return crypto.randomBytes(16).toString("base64");
+  };
+user.encryptPassword = function(plainText, salt) {
+    return crypto
+        .createHash('RSA-SHA256')
+        .update(plainText)
+        .update(salt)
+        .digest('hex')
+}
+const setSaltAndPassword = oneuser => {
+    if (oneuser.changed('password')) {
+        oneuser.salt = user.generateSalt()
+        oneuser.password = user.encryptPassword(oneuser.password(), oneuser.salt())
+    }
+}
+user.beforeCreate(setSaltAndPassword)
+user.beforeUpdate(setSaltAndPassword)
 
 module.exports = user;
