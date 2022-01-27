@@ -14,20 +14,20 @@ const pkg = require('../package.json')
         
 //     }
 // )
-const database = new Sequelize('capstone_backend', 'postgres', 'password', {   
-  host: 'localhost',  
-  dialect:'postgres'
-}) 
+// const database = new Sequelize('capstone_backend', 'postgres', 'password', {   
+//   host: 'localhost',  
+//   dialect:'postgres'
+// }) 
 
-// const database = new Sequelize(process.env.DATABASE_URL, {
-//   dialectOptions: {
-//     ssl: {
-//       require: true,
-//       rejectUnauthorized: false
-//     }
-//   }
-// }
-// );
+const database = new Sequelize(process.env.DATABASE_URL, {
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false
+    }
+  }
+}
+);
 
 
 database
