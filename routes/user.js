@@ -6,8 +6,8 @@ const database = require('../models/database')
 
 router.get('/', async(req, res) => {
     try{
-        const users = await User.findAll()
-        res.status(200).send(users)
+        const oneuser = await User.findByPk("username")
+        res.status(200).send(oneuser)
     }catch(error){
         res.status(404).send(error.message)
     }
