@@ -11,10 +11,10 @@ const pkg = require('../package.json')
 //         logging : false
 //     }
 // )
-const database = new Sequelize('capstone_backend', 'postgres', 'password', {   
-  host: 'localhost',  
-  dialect:'postgres'
-}) 
+// const database = new Sequelize('capstone_backend', 'postgres', 'password', {   
+//   host: 'localhost',  
+//   dialect:'postgres'
+// }) 
 
 
 const database = new Sequelize(process.env.DATABASE_URL, {
