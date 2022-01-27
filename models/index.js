@@ -38,6 +38,6 @@ module.exports = {
     Order,
     Category,
     SellingList,
-    feedback,
-    purchaseCart
+    Feedback,
+    PurchaseCart
 }

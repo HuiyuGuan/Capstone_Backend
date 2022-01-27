@@ -3,7 +3,7 @@ const pkg = require('../package.json')
 
 const database = new Sequelize(
   // postgres://myuser:mypassword@myhost:5432/mydatabasename
-    process.env.DATABASE_url || `postgres://postgres:sql@localhost:5432/${pkg.name}`,
+    process.env.DATABASE_URL|| `postgres://postgres:sql@localhost:5432/${pkg.name}`,
     {
         dialect : 'postgres',
         logging : false
