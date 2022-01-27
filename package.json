@@ -4,9 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-
     "start": "node app.js",
-
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +22,7 @@
     "connect-session-sequelize": "^7.1.2",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
+    "dotenv": "^14.3.2",
     "express": "^4.17.2",
     "express-session": "^1.17.2",
     "express-session-sequelize": "^2.3.0",
