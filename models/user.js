@@ -15,9 +15,9 @@ const user = database.define('user' ,{
         validate:{
             notEmpty: true,
         },
-        get() {
-            return () => this.getDataValue('password')
-        }
+        // get() {
+        //     return () => this.getDataValue('password')
+        // }
     },
     // salt: {
     //     type: Sequelize.STRING,
