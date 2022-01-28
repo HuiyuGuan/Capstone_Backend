@@ -32,6 +32,21 @@ router.delete('/:item_id', async(req, res) => {
     }
 })
 
+router.put('/', async(req, res) => {
+    try {
+        const updateItem = await Item.update(req.body, { 
+            where : { item_id : req.body.item_id },
+            returning : true 
+        });
+        res.status(200).json({
+            newData: updateItem[1][0].dataValues
+        })
+    } catch (error) {
+        res.send(error.message)
+    }
+})
+
+
 
 
 module.exports = router;
