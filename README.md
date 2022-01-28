@@ -1,3 +1,3 @@
 # Capstone_Backend mm 
 
-SellIt is and ecommerce marketplace where users either buy items or post items to sell. The 
+Smarket is an ecommerce marketplace where users can either buy items or post items to sell. Every user who wants to operate on the website needs to have an account on with us. The backend of this app was created using node js, express, postgres, sequelize and also heroku for the deployment. We are looking forward to add the user authentication, the option for users to be able to bid for items and much more exciting features. During this difficult times that the whole world is facing, we are also looking forward to add capabilities for user to donate through our app to charities of their choice. 
