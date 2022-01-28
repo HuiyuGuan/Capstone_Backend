@@ -7,4 +7,4 @@ database diagram:
 
 
 
-<img width="777" alt="Screen Shot 2022-01-27 at 11 43 49 PM" src="https://user-images.githubusercontent.com/70614312/151488836-6f5c03d4-8131-4f71-8094-5c7fdb5e2be9.png">
+<img width="755" alt="Screen Shot 2022-01-27 at 11 59 17 PM" src="https://user-images.githubusercontent.com/70614312/151490008-f3073690-68ed-46d3-8b52-e24ae444ab21.png">
