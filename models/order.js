@@ -15,21 +15,26 @@ const order = database.define('order' ,{
         allowNull:false,
         notEmpty: true
     },
-    item_id: {
-        type: Sequelize.INTEGER,
+    item_name: {
+        type: Sequelize.STRING,
         allowNull:false,
         notEmpty: true
     },
-    order_date: {
-        type: Sequelize.DATE,
-        allowNull:false,
-        notEmpty: true
+    item_image: {
+        type: Sequelize.TEXT,
+        defaultValue : "https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg",
     },
     total: {
         type: Sequelize.REAL,
         allowNull:false,
         notEmpty: true
-    }
+    },
+
+    item_seller: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        notEmpty: true
+    },
 })
 
 module.exports = order;
